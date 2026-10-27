@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const EMAIL = "sneha.jay@sunentrix.cfd";
@@ -43,6 +43,17 @@ const steps = [
 export default function Contact() {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* clipboard unavailable — ignore */
+    }
+  };
 
   return (
     <section id="contact" className="relative py-24 px-6 bg-canvas overflow-hidden">
@@ -101,10 +112,35 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* Email shown for easy copy */}
-          <div className="flex items-center justify-center gap-2 mb-5">
+          {/* Email shown with copy button */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
             <span className="text-[12.5px] text-text-muted">or reach me directly at</span>
-            <a href={`mailto:${EMAIL}`} className="text-[12.5px] font-medium text-accent hover:underline">{EMAIL}</a>
+            <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-surface pl-3 pr-1 py-1">
+              <a href={`mailto:${EMAIL}`} className="text-[12.5px] font-medium text-accent hover:underline">{EMAIL}</a>
+              <button
+                type="button"
+                onClick={copyEmail}
+                aria-label={copied ? "Email copied" : "Copy email address"}
+                className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11.5px] font-semibold text-text-secondary hover:text-accent hover:bg-accent-light transition-colors"
+              >
+                {copied ? (
+                  <>
+                    <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" viewBox="0 0 14 14">
+                      <path d="M2.5 7.5l3 3 6-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Copied
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 14 14">
+                      <rect x="4.5" y="4.5" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+                      <path d="M9.5 4.5V3a1.5 1.5 0 00-1.5-1.5H3A1.5 1.5 0 001.5 3v5A1.5 1.5 0 003 9.5h1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Copy
+                  </>
+                )}
+              </button>
+            </span>
           </div>
 
           {/* Tertiary */}
