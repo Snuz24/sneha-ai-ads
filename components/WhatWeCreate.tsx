@@ -5,61 +5,71 @@ import { motion, useInView } from "framer-motion";
 
 const items = [
   {
-    title: "UGC Video Ads",
-    description: "Authentic, scroll-stopping creator-style videos that make your AI product feel real, relatable, and worth trying.",
+    title: "Story-led brand films",
+    description: "Short films with a real story: a hook, an emotion, and your product as the hero. Like the husband who forgets the Diwali gift, or a family sharing mithai.",
+    bestFor: "Launches, festive campaigns, brand awareness",
+    worksOn: "Reels, YouTube, Meta ads",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M8.5 7.5v5l4-2.5-4-2.5z" fill="currentColor" />
+        <rect x="2.5" y="4" width="15" height="12" rx="2" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M8 8l4 2-4 2V8z" fill="currentColor" />
       </svg>
     ),
   },
   {
-    title: "UGC Product Demos",
-    description: "Creator-style walkthroughs that show exactly what your product does and why it matters — without the jargon or confusion.",
+    title: "AI product ads",
+    description: "Your product placed in a luxury, festive, or lifestyle world — lit and styled like a high-end campaign shoot, without the studio.",
+    bestFor: "New products, catalogue refresh, sale campaigns",
+    worksOn: "Reels, Meta ads, website banners",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <rect x="2.5" y="4" width="15" height="10" rx="2" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M8 8.5v3l3-1.5-3-1.5zM7 17h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M4 7l6-3 6 3-6 3-6-3zM4 7v6l6 3 6-3V7" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    title: "Founder UGC & Storytelling",
-    description: "Human-first, talking-to-camera videos that put your voice and vision front and center, building the trust that turns viewers into believers.",
+    title: "AI UGC videos",
+    description: "Creator-style videos with AI people: reviews, reactions, unboxings, and POV stories that feel like they were filmed on a phone.",
+    bestFor: "Building trust, performance ads, testing hooks",
+    worksOn: "Reels, Stories, Meta ads",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <path d="M10 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM4 17a6 6 0 0112 0" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <rect x="5" y="2.5" width="10" height="15" rx="2.5" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M9 14.5h2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: "Product Launch Videos",
-    description: "Launch content that builds anticipation and turns a release into a moment people actually pay attention to.",
+    title: "VFX & splash films",
+    description: "Slow-motion splashes, swirls, melts, and transformations. Strawberry milk, molten chocolate, serum drops — all made to make people watch twice.",
+    bestFor: "Food, drinks, beauty, and anything that pours, melts or sparkles",
+    worksOn: "Reels, Shorts, YouTube pre-roll",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <path d="M11 3c3 1 5 4 5 7l-3 3-4-4 2-6zM9 13l-2 2M7 10l-3 1 1.5 1.5M9 16l1-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M10 3c2.5 3 4 5 4 7a4 4 0 11-8 0c0-2 1.5-4 4-7z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
       </svg>
     ),
   },
   {
-    title: "Feature Announcements",
-    description: "Short, sharp videos that help users understand new features fast — and actually start using them.",
+    title: "Model & lifestyle showcase",
+    description: "AI models using, wearing, or presenting your product in real-life moments: outfits, jewellery, gadgets, home and personal care.",
+    bestFor: "Fashion, accessories, lifestyle and consumer brands",
+    worksOn: "Reels, lookbooks, Meta ads",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <path d="M4 8v4l9 4V4L4 8zM4 8H3a1 1 0 00-1 1v2a1 1 0 001 1h1M13 7c1.5 0 1.5 6 0 6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="10" cy="6" r="3" stroke="currentColor" strokeWidth="1.4" />
+        <path d="M4.5 17a5.5 5.5 0 0111 0" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
       </svg>
     ),
   },
   {
-    title: "Social-First AI Content",
-    description: "Platform-ready content built for how people actually scroll — designed to earn attention on social from the first second.",
+    title: "Festive & seasonal campaigns",
+    description: "A set of matching ads planned around a season: Diwali, wedding season, Valentine's, New Year, or your own sale.",
+    bestFor: "Brands that want a full campaign, not a single ad",
+    worksOn: "Every platform, in every size",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-        <circle cx="6" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.4" />
-        <circle cx="14" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.4" />
-        <circle cx="14" cy="15" r="2.5" stroke="currentColor" strokeWidth="1.4" />
-        <path d="M8.2 8.8l3.6-2.2M8.2 11.2l3.6 2.2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+        <path d="M10 2.5l1.9 3.9 4.3.6-3.1 3 .7 4.2L10 16.2l-3.8 2 .7-4.2-3.1-3 4.3-.6L10 2.5z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -70,7 +80,7 @@ export default function WhatWeCreate() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="services" className="relative py-24 px-6 bg-surface">
+    <section id="services" className="relative py-24 px-6 bg-canvas">
       <div className="max-w-6xl mx-auto" ref={ref}>
         {/* Header */}
         <motion.div
@@ -79,20 +89,13 @@ export default function WhatWeCreate() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <p className="section-label mb-4">What We Create</p>
+          <p className="section-label mb-4">What I Make</p>
           <h2 className="text-[2rem] sm:text-[2.6rem] font-bold tracking-tightest text-gradient-warm leading-tight mb-5">
-            Every Kind of UGC Your AI Product Needs.
+            Six kinds of films for any brand, in any industry.
           </h2>
-          <p className="text-[15.5px] text-text-secondary leading-relaxed mb-6">
-            Six creator-style UGC formats, all built for AI companies. Whatever stage you're at — launching, growing, or explaining something new — there's a format for it.
+          <p className="text-[15.5px] text-text-secondary leading-relaxed">
+            One approach behind all of them: find the feeling first, then build the world around your product.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {["TikTok", "Instagram Reels", "YouTube Shorts", "Paid Social"].map((p) => (
-              <span key={p} className="px-3 py-1 rounded-full bg-accent-light text-accent text-[12px] font-medium">
-                {p}
-              </span>
-            ))}
-          </div>
         </motion.div>
 
         {/* Cards */}
@@ -103,7 +106,7 @@ export default function WhatWeCreate() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.08 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="group p-7 rounded-2xl bg-card card-border hover:shadow-card-hover transition-shadow duration-300"
+              className="group flex flex-col p-7 rounded-2xl bg-card card-border hover:shadow-card-hover transition-shadow duration-300"
               style={{ boxShadow: "0 1px 3px rgba(28,28,46,0.05), 0 4px 20px rgba(28,28,46,0.06)" }}
               whileHover={{ y: -3 }}
             >
@@ -111,7 +114,18 @@ export default function WhatWeCreate() {
                 {item.icon}
               </div>
               <h3 className="text-[16px] font-semibold text-text-primary tracking-snug mb-2">{item.title}</h3>
-              <p className="text-[13.5px] text-text-secondary leading-relaxed">{item.description}</p>
+              <p className="text-[13.5px] text-text-secondary leading-relaxed mb-5 flex-1">{item.description}</p>
+
+              <div className="space-y-2.5 pt-4 border-t border-border">
+                <div>
+                  <p className="text-[10.5px] font-bold uppercase tracking-widest text-accent mb-0.5">Best for</p>
+                  <p className="text-[12.5px] text-text-secondary leading-snug">{item.bestFor}</p>
+                </div>
+                <div>
+                  <p className="text-[10.5px] font-bold uppercase tracking-widest text-accent mb-0.5">Works on</p>
+                  <p className="text-[12.5px] text-text-secondary leading-snug">{item.worksOn}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

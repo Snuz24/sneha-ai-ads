@@ -1,16 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import CreatorImage from "./CreatorImage";
 
 const serviceChips = [
-  "UGC Video Ads",
-  "Product Demos",
-  "Founder Videos",
-  "Testimonials & Launches",
+  "Brand films",
+  "Product ads",
+  "UGC videos",
+  "VFX & splash films",
+  "Any industry",
 ];
 
-const logos = ["Replit", "Claude", "Claude Code", "ChatGPT"];
+const industries = ["Beauty", "Fashion", "Food", "Jewellery", "Tech", "Lifestyle"];
 
 export default function Hero() {
   return (
@@ -20,7 +20,6 @@ export default function Hero() {
         <div className="absolute -top-[15%] left-[5%] w-[650px] h-[650px] rounded-full bg-accent/[0.07] blur-[130px] animate-float-a" />
         <div className="absolute top-[25%] right-[0%] w-[500px] h-[500px] rounded-full bg-accent-2/[0.06] blur-[110px] animate-float-b" />
         <div className="absolute bottom-[5%] left-[35%] w-[380px] h-[380px] rounded-full bg-accent-mid/[0.08] blur-[90px] animate-float-c" />
-        {/* Fine dot grid */}
         <div
           className="absolute inset-0 opacity-[0.018]"
           style={{
@@ -41,7 +40,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-light border border-accent-mid/50 text-[12px] font-semibold text-accent mb-8"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            Sunentrix · UGC Creator for AI Products
+            Freelance AI Ad Creator · Available for Projects
           </motion.div>
 
           {/* Headline */}
@@ -51,21 +50,21 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] font-bold tracking-tightest leading-[1.08] text-gradient-warm mb-5"
           >
-            Scroll-Stopping UGC for{" "}
-            <span className="text-gradient-accent">AI Companies.</span>
+            AI ads that make people stop scrolling and{" "}
+            <span className="text-gradient-accent">start buying.</span>
           </motion.h1>
 
-          {/* Subheadline — plain language, says exactly what we do */}
+          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
             className="text-[16px] sm:text-[17.5px] leading-relaxed text-text-secondary mb-7 max-w-xl"
           >
-            Sunentrix creates authentic, creator-style UGC for AI startups — product demos, founder videos, testimonials, and launch content that make your product feel real, build trust, and get people to actually try it.
+            I'm a freelance AI ad creator for brands of every kind — from beauty, fashion and food to tech, lifestyle and services. I make story-led brand films, product ads, creator-style UGC and VFX videos, each one scripted, directed, and hand-edited by me.
           </motion.p>
 
-          {/* Service chips — instant scan of what we offer */}
+          {/* Service chips */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,7 +93,7 @@ export default function Hero() {
               href="#work"
               className="group inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
             >
-              View Portfolio
+              See My Work
               <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 16 16">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -103,11 +102,11 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold rounded-xl border border-border-md text-text-primary hover:bg-text-primary/[0.03] hover:border-text-primary/20 transition-all"
             >
-              Let's Work Together
+              Email Me
             </a>
           </motion.div>
 
-          {/* Social proof logos */}
+          {/* Industries strip */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -115,36 +114,46 @@ export default function Hero() {
             className="mt-14 pt-8 border-t border-border"
           >
             <p className="text-[11.5px] font-medium text-text-muted uppercase tracking-widest mb-4">
-              UGC created for AI products like
+              Ads for brands across
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {logos.map((logo) => (
-                <span key={logo} className="text-[13.5px] font-semibold text-text-muted/70">
-                  {logo}
+              {industries.map((item) => (
+                <span key={item} className="text-[13.5px] font-semibold text-text-muted/70">
+                  {item}
                 </span>
               ))}
             </div>
           </motion.div>
         </div>
 
-        {/* Right: Creator image */}
+        {/* Right: Showreel */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="hidden lg:flex flex-col items-center gap-5"
         >
-          {/* Frame */}
           <div
-            className="relative w-[300px] h-[380px] rounded-3xl overflow-hidden"
+            className="relative w-[300px] aspect-[9/16] rounded-3xl overflow-hidden bg-surface"
             style={{ boxShadow: "0 2px 8px rgba(28,28,46,0.06), 0 16px 48px rgba(124,111,224,0.14), 0 0 0 1px rgba(28,28,46,0.07)" }}
           >
-            <CreatorImage priority className="rounded-3xl" sizes="300px" />
-
-            {/* Floating badge */}
+            <video
+              src="/media/reel.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover"
+            />
+            {/* Reel label */}
+            <div className="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[10.5px] font-semibold text-accent border border-accent/20 uppercase tracking-wide">
+              Showreel
+            </div>
+            {/* Nameplate */}
             <div className="absolute bottom-5 left-5 right-5 glass-warm rounded-xl px-4 py-3" style={{ boxShadow: "0 2px 12px rgba(28,28,46,0.10)" }}>
-              <p className="text-[13px] font-semibold text-text-primary">Sneha Jayabhaye</p>
-              <p className="text-[11.5px] text-text-secondary mt-0.5">UGC Creator · Founder of Sunentrix</p>
+              <p className="text-[13px] font-semibold text-text-primary">Sneha J</p>
+              <p className="text-[11.5px] text-text-secondary mt-0.5">Freelance AI Ad Creator</p>
             </div>
           </div>
         </motion.div>

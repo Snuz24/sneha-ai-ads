@@ -3,14 +3,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const EMAIL = "snehajayb1@gmail.com";
+const EMAIL = "sneha.jay@sunentrix.cfd";
 const LINKEDIN = "https://www.linkedin.com/in/sneha-jayabhaye-253b27280/";
 
 const steps = [
   {
     number: "01",
-    title: "Share your product",
-    description: "Email me or connect on LinkedIn and tell me a little about what you're building — your product, who it's for, and what you're hoping to achieve. You don't need a polished brief. A link and a few honest sentences about where you are right now is the perfect place to begin.",
+    title: "Tell me about your product",
+    description: "Email me or connect on LinkedIn with your product, your audience, and your next launch or sale. You don't need a polished brief — a link and a few honest lines about what you're trying to achieve is the perfect place to start.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
@@ -20,8 +20,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "I turn your product into a story",
-    description: "Before I create anything, I take the time to really understand your product, the people using it, and how it's positioned. Then I shape concepts that are built around human emotions and what's actually going on in your users' heads — not just a list of features. The goal is a story people feel, not a demo they tolerate.",
+    title: "I suggest the right film",
+    description: "I'll come back with the kind of film that will work best for you — whether that's a story-led brand ad, a polished product film, UGC, or a full festive campaign — along with the concept, format, and where it should run.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <path d="M10 2.5l1.8 4 4.2.5-3.1 2.9.8 4.1L10 12l-3.7 2L7.1 9.9 4 7l4.2-.5L10 2.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
@@ -30,8 +30,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "We create content people remember",
-    description: "Once we're aligned on the creative direction, timeline, deliverables, and pricing, I get to work. You get polished, platform-ready content designed to help people discover your product, understand what it does, trust that it's for them, and still remember it long after they've scrolled past.",
+    title: "I script, direct & edit it",
+    description: "Once we're aligned on the concept, timeline, and pricing, I write, direct, and hand-edit the ad myself — delivered polished and ready for Instagram, Meta ads, YouTube, and your website, in the sizes you need.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <path d="M3 10.5l3.5 3.5L17 5.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -45,7 +45,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="contact" className="relative py-24 px-6 bg-surface overflow-hidden">
+    <section id="contact" className="relative py-24 px-6 bg-canvas overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_100%,rgba(124,111,224,0.05)_0%,transparent_65%)] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto" ref={ref}>
@@ -56,12 +56,12 @@ export default function Contact() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <p className="section-label mb-4">Get In Touch</p>
+          <p className="section-label mb-4">Contact</p>
           <h2 className="text-[2rem] sm:text-[2.8rem] font-bold tracking-tightest text-gradient-warm leading-tight mb-5">
-            Let's Build Content People<br />Actually Remember.
+            Let's make your brand<br />unforgettable.
           </h2>
           <p className="text-[15.5px] text-text-secondary max-w-lg mx-auto leading-relaxed">
-            The fastest way to start a conversation with the studio is a direct message. Send us your product, and we'll come back with a clear point of view on the story you need to tell.
+            Tell me about your product, your audience, and your next launch or sale. I'll suggest the kind of film that will work best — whether it's a story ad, a product film, or a full festive campaign.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export default function Contact() {
           {/* Primary + secondary */}
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <a
-              href={`mailto:${EMAIL}?subject=Product%20Storytelling%20Inquiry`}
+              href={`mailto:${EMAIL}?subject=AI%20ad%20enquiry`}
               className="group flex-1 flex items-center justify-center gap-2.5 px-6 py-4 text-[15px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
             >
               <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 20 20">
@@ -109,16 +109,9 @@ export default function Contact() {
 
           {/* Tertiary */}
           <div className="pt-5 border-t border-border text-center">
-            <p className="text-[12.5px] text-text-muted mb-2.5">Prefer to talk it through first?</p>
-            <a
-              href={`mailto:${EMAIL}?subject=Discovery%20Call%20Request`}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-[12.5px] font-medium text-text-secondary rounded-lg border border-border hover:border-border-md hover:text-text-primary transition-all"
-            >
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 14 14">
-                <path d="M3 2.5c-.5 0-1 .5-1 1 0 4.5 4 8.5 8.5 8.5.5 0 1-.5 1-1V9.3c0-.4-.3-.7-.7-.8l-1.8-.4c-.3 0-.6.1-.8.3l-.6.6C6.4 8.2 5.2 7 4.5 5.8l.6-.6c.2-.2.3-.5.3-.8L5 2.6c-.1-.4-.4-.7-.8-.7H3z" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round" />
-              </svg>
-              Book a Discovery Call
-            </a>
+            <p className="text-[12.5px] text-text-muted">
+              Working with brands across every industry
+            </p>
           </div>
         </motion.div>
 

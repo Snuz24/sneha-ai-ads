@@ -3,13 +3,13 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sunentrix — UGC for AI Companies",
+  title: "Sneha J — AI Ad Creator for Brands",
   description:
-    "Sunentrix creates scroll-stopping UGC for AI companies — product demos, founder videos, testimonials, and launch content that makes AI products feel real, build trust, and get people to try them.",
+    "Freelance AI ad creator making story-led brand films, product ads, creator-style UGC and VFX videos for brands of every kind — beauty, fashion, food, jewellery, tech and more.",
   openGraph: {
-    title: "Sunentrix — UGC for AI Companies",
+    title: "Sneha J — AI Ad Creator for Brands",
     description:
-      "Authentic, creator-style UGC for AI startups — product demos, founder stories, testimonials, and launch videos that drive understanding, trust, and sign-ups.",
+      "AI ads that make people stop scrolling and start buying. Story-led brand films, product ads, UGC and VFX videos, scripted, directed and edited for Instagram, Meta, YouTube and the web.",
     type: "website",
   },
 };

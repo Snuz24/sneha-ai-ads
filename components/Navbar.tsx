@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 const navLinks = [
   { label: "Work",     href: "#work" },
-  { label: "Services", href: "#services" },
+  { label: "What I Make", href: "#services" },
   { label: "About",    href: "#about" },
   { label: "Contact",  href: "#contact" },
 ];
@@ -41,8 +41,8 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="flex items-baseline gap-1.5">
-              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sunentrix</span>
-              <span className="hidden sm:inline text-[10.5px] font-medium tracking-wide text-text-muted">UGC for AI</span>
+              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sneha J</span>
+              <span className="hidden sm:inline text-[10.5px] font-medium tracking-wide text-text-muted">AI Ad Creator</span>
             </span>
           </a>
 

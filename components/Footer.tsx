@@ -13,20 +13,20 @@ export default function Footer() {
                   <path d="M6.5 1.5L11 4.25v5.5L6.5 12.5 2 9.75v-5.5L6.5 1.5z" fill="white" fillOpacity="0.95" />
                 </svg>
               </div>
-              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sunentrix</span>
+              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sneha J</span>
             </div>
             <p className="text-[12.5px] text-text-muted max-w-xs text-center md:text-left leading-relaxed">
-              UGC for AI companies · Creator-style product demos, founder videos, testimonials, and launch content. Founded &amp; led by Sneha Jayabhaye.
+              Freelance AI ad creator · Story-led brand films, product ads, UGC, and VFX videos for brands of every kind.
             </p>
           </div>
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2">
             {[
-              { label: "Work",     href: "#work" },
-              { label: "Services", href: "#services" },
-              { label: "About",    href: "#about" },
-              { label: "Contact",  href: "#contact" },
+              { label: "Work",        href: "#work" },
+              { label: "What I Make", href: "#services" },
+              { label: "About",       href: "#about" },
+              { label: "Contact",     href: "#contact" },
             ].map((link) => (
               <a
                 key={link.href}
@@ -43,13 +43,13 @@ export default function Footer() {
             href="#contact"
             className="px-5 py-2.5 text-[13px] font-semibold rounded-xl border border-border-md text-text-primary hover:bg-accent-light hover:border-accent-mid/50 hover:text-accent transition-all"
           >
-            Book a Discovery Call
+            Email Me
           </a>
         </div>
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-text-muted">© {year} Sunentrix Studio. All rights reserved.</p>
-          <p className="text-[12px] text-text-muted">A boutique studio for ambitious AI founders.</p>
+          <p className="text-[12px] text-text-muted">© {year} Sneha J · Freelance AI ad creator</p>
+          <p className="text-[12px] text-text-muted">AI is my camera. The story is still mine.</p>
         </div>
       </div>
     </footer>

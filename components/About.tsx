@@ -8,6 +8,15 @@ const credentials = [
   {
     icon: (
       <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
+        <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.3" />
+        <path d="M8 4.5V8l2.5 1.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    label: "6 years editing video & content",
+  },
+  {
+    icon: (
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
         <path d="M8 1.5L2 5v6l6 3.5L14 11V5L8 1.5z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
         <path d="M8 1.5v13M2 5l6 3.5L14 5" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
       </svg>
@@ -21,7 +30,7 @@ const credentials = [
         <path d="M5 7h6M5 9.5h4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
       </svg>
     ),
-    label: "Business Development Executive",
+    label: "Business development · digital advertising",
   },
 ];
 
@@ -55,11 +64,11 @@ export default function About() {
                 className="absolute bottom-5 left-5 right-5 glass-warm rounded-xl px-5 py-4"
                 style={{ boxShadow: "0 2px 12px rgba(28,28,46,0.10)" }}
               >
-                <p className="text-[16px] font-bold text-text-primary tracking-tight">Sneha Jayabhaye</p>
-                <p className="text-[13px] text-text-secondary mt-0.5">Founder &amp; Creative Director, Sunentrix</p>
+                <p className="text-[16px] font-bold text-text-primary tracking-tight">Sneha J</p>
+                <p className="text-[13px] text-text-secondary mt-0.5">Freelance AI Ad Creator</p>
                 <div className="flex items-center gap-1.5 mt-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  <span className="text-[11.5px] font-medium text-text-secondary">Available for partnerships</span>
+                  <span className="text-[11.5px] font-medium text-text-secondary">Available for projects</span>
                 </div>
               </div>
             </div>
@@ -91,30 +100,24 @@ export default function About() {
             transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="pt-2"
           >
-            <p className="section-label mb-5">About the Studio</p>
+            <p className="section-label mb-5">About</p>
 
-            <h2 className="text-[1.9rem] sm:text-[2.2rem] font-bold tracking-tightest text-gradient-warm leading-tight mb-8">
-              I've always been a little obsessed with one question: why do some AI products capture attention while others quietly disappear?
+            <h2 className="text-[1.9rem] sm:text-[2.4rem] font-bold tracking-tightest text-gradient-warm leading-[1.15] mb-8">
+              &ldquo;AI is my camera. The story is still mine.&rdquo;
             </h2>
 
             <div className="space-y-5 text-[15.5px] leading-[1.8] text-text-secondary">
               <p>
-                Two products can be equally brilliant under the hood, and yet one spreads while the other never gets a second look. For a long time that gap fascinated me, and the more I looked, the more convinced I became that it usually isn't a technology problem at all. It's a storytelling one.
+                Hi, I'm Sneha. I've been editing videos and making content for <strong className="text-text-primary font-semibold">six years</strong>. These days I use AI to make the kind of ads that used to need a full shoot — models, sets, festive lighting and all — and bring them within reach of brands that could never book that kind of production.
               </p>
               <p>
-                I think attention is the most valuable currency we have right now. Everyone's fighting for it. But here's the thing I keep coming back to — attention on its own isn't enough. You can get someone to stop for a second, but if there's no feeling attached to what they see, they forget it by the next scroll. What actually makes a product stick is emotion. Storytelling is what turns a moment of attention into understanding, trust, and memory.
+                But the tools are just the camera. The part that actually matters — the hook, the emotion, the little human moment that makes someone stop scrolling — that's still the craft I've spent years on. AI lets me move faster and go bigger; it doesn't write the story for me.
               </p>
               <p>
-                So I never start with features. I start with people — what frustrates them, what they're quietly ambitious about, what they secretly want and haven't found yet. Once I understand the person, the product almost tells me how it wants to be introduced.
+                I studied <strong className="text-text-primary font-semibold">Computer Science &amp; Business Systems</strong> and worked in <strong className="text-text-primary font-semibold">business development at a digital advertising company</strong>, so I think about what actually sells, not only what looks beautiful. Every ad I make has to do both: look like a high-end campaign, and move the people watching it toward buying.
               </p>
               <p>
-                The way I see all of this comes from two sides of my brain that don't usually sit together. My <strong className="text-text-primary font-semibold">B.Tech in Computer Science &amp; Business Systems</strong> means I can actually understand an AI product — how it works, what's genuinely hard, what's genuinely new. And my work as a <strong className="text-text-primary font-semibold">Business Development Executive</strong> means I spend my days watching how real people evaluate products, where they hesitate, what objections come up, and what finally makes them say yes. One side helps me understand the product. The other helps me understand the person deciding whether to care about it.
-              </p>
-              <p>
-                Those two perspectives are really what shape everything I make. Every single video starts with the same quiet question in my head: <em className="text-text-primary not-italic">"How do I make someone stop scrolling, actually care about this product, and still remember it tomorrow?"</em>
-              </p>
-              <p>
-                That obsession is why I started <strong className="text-text-primary font-semibold">Sunentrix</strong> — a small, founder-led AI Product Storytelling Studio. It's intentionally boutique: close, hands-on, and built around the belief that the right story can change how an entire product is understood. When we take on a project, you're working directly with the person who thinks about it, not a layer of account managers. If that's the kind of partner you want telling your story, I'd love to hear about what you're building.
+                That mix — real editing craft, an understanding of AI, and a commercial instinct for what converts — is what I bring to every brand I work with, whatever the industry.
               </p>
             </div>
 
