@@ -9,8 +9,8 @@ const LINKEDIN = "https://www.linkedin.com/in/sneha-jayabhaye-253b27280/";
 const steps = [
   {
     number: "01",
-    title: "Tell me about your product",
-    description: "Email me or connect on LinkedIn with your product, your audience, and your next launch or sale. You don't need a polished brief — a link and a few honest lines about what you're trying to achieve is the perfect place to start.",
+    title: "Tell us about your product",
+    description: "Email us or connect on LinkedIn with your product, your audience, and your next launch or sale. You don't need a polished brief — a link and a few honest lines about what you're trying to achieve is the perfect place to start.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.4" />
@@ -20,8 +20,8 @@ const steps = [
   },
   {
     number: "02",
-    title: "I suggest the right film",
-    description: "I'll come back with the kind of film that will work best for you — whether that's a story-led brand ad, a polished product film, UGC, or a full festive campaign — along with the concept, format, and where it should run.",
+    title: "We suggest the right film",
+    description: "We'll come back with the kind of film that will work best for you — whether that's a story-led brand ad, a polished product film, UGC, or a full festive campaign — along with the concept, format, and where it should run.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <path d="M10 2.5l1.8 4 4.2.5-3.1 2.9.8 4.1L10 12l-3.7 2L7.1 9.9 4 7l4.2-.5L10 2.5z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
@@ -30,8 +30,8 @@ const steps = [
   },
   {
     number: "03",
-    title: "I script, direct & edit it",
-    description: "Once we're aligned on the concept, timeline, and pricing, I write, direct, and hand-edit the ad myself — delivered polished and ready for Instagram, Meta ads, YouTube, and your website, in the sizes you need.",
+    title: "We script, direct & edit it",
+    description: "Once we're aligned on the concept, timeline, and pricing, we write, direct, and hand-edit the ad — delivered polished and ready for Instagram, Meta ads, YouTube, and your website, in the sizes you need.",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
         <path d="M3 10.5l3.5 3.5L17 5.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -72,7 +72,7 @@ export default function Contact() {
             Let's make your brand<br />unforgettable.
           </h2>
           <p className="text-[15.5px] text-text-secondary max-w-lg mx-auto leading-relaxed">
-            Tell me about your product, your audience, and your next launch or sale. I'll suggest the kind of film that will work best — whether it's a story ad, a product film, or a full festive campaign.
+            Tell us about your product, your audience, and your next launch or sale. We'll suggest the kind of film that will work best — whether it's a story ad, a product film, or a full festive campaign.
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function Contact() {
                 <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.5" />
                 <path d="M3.5 6l6.5 4.5L16.5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              Email Me
+              Email Us
               <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 16 16">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -114,7 +114,7 @@ export default function Contact() {
 
           {/* Email shown with copy button */}
           <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
-            <span className="text-[12.5px] text-text-muted">or reach me directly at</span>
+            <span className="text-[12.5px] text-text-muted">or reach us directly at</span>
             <span className="inline-flex items-center gap-1 rounded-lg border border-border bg-surface pl-3 pr-1 py-1">
               <a href={`mailto:${EMAIL}`} className="text-[12.5px] font-medium text-accent hover:underline">{EMAIL}</a>
               <button
@@ -196,7 +196,7 @@ export default function Contact() {
           </div>
 
           <p className="mt-8 text-center text-[12.5px] text-text-muted">
-            I typically respond within 24 hours
+            We typically respond within 24 hours
           </p>
         </motion.div>
       </div>

@@ -89,7 +89,7 @@ export default function WhatWeCreate() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <p className="section-label mb-4">What I Make</p>
+          <p className="section-label mb-4">What We Make</p>
           <h2 className="text-[2rem] sm:text-[2.6rem] font-bold tracking-tightest text-gradient-warm leading-tight mb-5">
             Six kinds of films for any brand, in any industry.
           </h2>

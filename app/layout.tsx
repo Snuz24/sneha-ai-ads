@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { STUDIO_NAME } from "@/lib/brand";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sneha J — AI Ad Creator for Brands",
+  title: `${STUDIO_NAME} — AI-Powered Ads for Brands`,
   description:
-    "Freelance AI ad creator making story-led brand films, product ads, creator-style UGC and VFX videos for brands of every kind — beauty, fashion, food, jewellery, tech and more.",
+    "A creative studio making story-led brand films, product ads, creator-style UGC and VFX videos for brands of every kind — beauty, fashion, food, jewellery, tech and more.",
   openGraph: {
-    title: "Sneha J — AI Ad Creator for Brands",
+    title: `${STUDIO_NAME} — AI-Powered Ads for Brands`,
     description:
       "AI ads that make people stop scrolling and start buying. Story-led brand films, product ads, UGC and VFX videos, scripted, directed and edited for Instagram, Meta, YouTube and the web.",
     type: "website",

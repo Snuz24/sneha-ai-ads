@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Sparkles from "./Sparkles";
+import { STUDIO_NAME, FOUNDER_NAME, FOUNDER_ROLE } from "@/lib/brand";
 
 const serviceChips = [
   "Brand films",
@@ -48,7 +49,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-light border border-accent-mid/50 text-[12px] font-semibold text-accent mb-8"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            Freelance AI Ad Creator · Available for Projects
+AI Ad Studio · Available for Projects
           </motion.div>
 
           {/* Headline */}
@@ -69,7 +70,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
             className="text-[16px] sm:text-[17.5px] leading-relaxed text-text-secondary mb-7 max-w-xl"
           >
-            I'm a freelance AI ad creator for brands of every kind — from beauty, fashion and food to tech, lifestyle and services. I make story-led brand films, product ads, creator-style UGC and VFX videos, each one scripted, directed, and hand-edited by me.
+We're a studio-led team making AI ads for brands of every kind — from beauty, fashion and food to tech, lifestyle and services. Story-led brand films, product ads, creator-style UGC and VFX videos, each one scripted, directed, and crafted end to end.
           </motion.p>
 
           {/* Service chips */}
@@ -110,7 +111,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold rounded-xl border border-border-md text-accent hover:bg-accent-light hover:border-accent/50 transition-all"
             >
-              Email Me
+              Email Us
             </a>
           </motion.div>
 
@@ -162,8 +163,8 @@ export default function Hero() {
             </div>
             {/* Nameplate */}
             <div className="absolute bottom-5 left-5 right-5 glass-warm rounded-xl px-4 py-3" style={{ boxShadow: "0 2px 12px rgba(28,28,46,0.10)" }}>
-              <p className="text-[13px] font-semibold text-text-primary">Sneha J</p>
-              <p className="text-[11.5px] text-text-secondary mt-0.5">Freelance AI Ad Creator</p>
+              <p className="text-[13px] font-semibold text-text-primary">{STUDIO_NAME}</p>
+              <p className="text-[11.5px] text-text-secondary mt-0.5">Led by {FOUNDER_NAME} · {FOUNDER_ROLE}</p>
             </div>
           </div>
         </motion.div>

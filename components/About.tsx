@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import CreatorImage from "./CreatorImage";
+import { FOUNDER_NAME, FOUNDER_ROLE } from "@/lib/brand";
 
 const credentials = [
   {
@@ -64,8 +65,8 @@ export default function About() {
                 className="absolute bottom-5 left-5 right-5 glass-warm rounded-xl px-5 py-4"
                 style={{ boxShadow: "0 2px 12px rgba(28,28,46,0.10)" }}
               >
-                <p className="text-[16px] font-bold text-text-primary tracking-tight">Sneha J</p>
-                <p className="text-[13px] text-text-secondary mt-0.5">Freelance AI Ad Creator</p>
+                <p className="text-[16px] font-bold text-text-primary tracking-tight">{FOUNDER_NAME}</p>
+                <p className="text-[13px] text-text-secondary mt-0.5">{FOUNDER_ROLE}</p>
                 <div className="flex items-center gap-1.5 mt-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                   <span className="text-[11.5px] font-medium text-text-secondary">Available for projects</span>
@@ -100,7 +101,7 @@ export default function About() {
             transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="pt-2"
           >
-            <p className="section-label mb-5">About</p>
+            <p className="section-label mb-5">About the Studio</p>
 
             <h2 className="text-[1.9rem] sm:text-[2.4rem] font-bold tracking-tightest text-gradient-warm leading-[1.15] mb-8">
               &ldquo;AI is my camera. The story is still mine.&rdquo;
@@ -108,7 +109,7 @@ export default function About() {
 
             <div className="space-y-5 text-[15.5px] leading-[1.8] text-text-secondary">
               <p>
-                Hi, I'm Sneha. I've been editing videos and making content for <strong className="text-text-primary font-semibold">six years</strong>. These days I use AI to make the kind of ads that used to need a full shoot — models, sets, festive lighting and all — and bring them within reach of brands that could never book that kind of production.
+                Hi, I'm Sneha — I lead a small, studio-led team that makes AI-powered ads for brands. I've been editing videos and making content for <strong className="text-text-primary font-semibold">six years</strong>, and these days we use AI to make the kind of ads that used to need a full shoot — models, sets, festive lighting and all — and bring them within reach of brands that could never book that kind of production.
               </p>
               <p>
                 But the tools are just the camera. The part that actually matters — the hook, the emotion, the little human moment that makes someone stop scrolling — that's still the craft I've spent years on. AI lets me move faster and go bigger; it doesn't write the story for me.

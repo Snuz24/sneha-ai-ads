@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 
+import { STUDIO_NAME } from "@/lib/brand";
+
 const navLinks = [
-  { label: "Work",     href: "#work" },
-  { label: "What I Make", href: "#services" },
-  { label: "About",    href: "#about" },
-  { label: "Contact",  href: "#contact" },
+  { label: "Work",      href: "#work" },
+  { label: "What We Make", href: "#services" },
+  { label: "About",     href: "#about" },
+  { label: "Contact",   href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -41,8 +43,8 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="flex items-baseline gap-1.5">
-              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sneha J</span>
-              <span className="hidden sm:inline text-[10.5px] font-medium tracking-wide text-text-muted">AI Ad Creator</span>
+              <span className="text-[15px] font-semibold tracking-tight text-text-primary">{STUDIO_NAME}</span>
+              <span className="hidden sm:inline text-[10.5px] font-medium tracking-wide text-text-muted">Creative Studio</span>
             </span>
           </a>
 
@@ -68,7 +70,7 @@ export default function Navbar() {
               href="#contact"
               className="px-4 py-2.5 text-[13px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
             >
-              Contact Me
+              Contact Us
             </a>
           </div>
 

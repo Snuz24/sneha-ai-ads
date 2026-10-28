@@ -1,3 +1,5 @@
+import { STUDIO_NAME, FOUNDER_NAME } from "@/lib/brand";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -13,20 +15,20 @@ export default function Footer() {
                   <path d="M6.5 1.5L11 4.25v5.5L6.5 12.5 2 9.75v-5.5L6.5 1.5z" fill="white" fillOpacity="0.95" />
                 </svg>
               </div>
-              <span className="text-[15px] font-semibold tracking-tight text-text-primary">Sneha J</span>
+              <span className="text-[15px] font-semibold tracking-tight text-text-primary">{STUDIO_NAME}</span>
             </div>
             <p className="text-[12.5px] text-text-muted max-w-xs text-center md:text-left leading-relaxed">
-              Freelance AI ad creator · Story-led brand films, product ads, UGC, and VFX videos for brands of every kind.
+              A creative studio making AI-powered ads for brands of every kind — story-led films, product ads, UGC, and VFX. Led by {FOUNDER_NAME}.
             </p>
           </div>
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-x-7 gap-y-2">
             {[
-              { label: "Work",        href: "#work" },
-              { label: "What I Make", href: "#services" },
-              { label: "About",       href: "#about" },
-              { label: "Contact",     href: "#contact" },
+              { label: "Work",         href: "#work" },
+              { label: "What We Make", href: "#services" },
+              { label: "About",        href: "#about" },
+              { label: "Contact",      href: "#contact" },
             ].map((link) => (
               <a
                 key={link.href}
@@ -43,13 +45,13 @@ export default function Footer() {
             href="#contact"
             className="px-5 py-2.5 text-[13px] font-semibold rounded-xl border border-border-md text-text-primary hover:bg-accent-light hover:border-accent-mid/50 hover:text-accent transition-all"
           >
-            Email Me
+            Email Us
           </a>
         </div>
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[12px] text-text-muted">© {year} Sneha J · Freelance AI ad creator</p>
-          <p className="text-[12px] text-text-muted">AI is my camera. The story is still mine.</p>
+          <p className="text-[12px] text-text-muted">© {year} {STUDIO_NAME} · Led by {FOUNDER_NAME}</p>
+          <p className="text-[12px] text-text-muted">AI is our camera. The story is still ours.</p>
         </div>
       </div>
     </footer>
