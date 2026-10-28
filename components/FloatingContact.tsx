@@ -36,7 +36,7 @@ export default function FloatingContact() {
           exit={{ opacity: 0, y: 24, scale: 0.9 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ y: -2 }}
-          className="group fixed bottom-6 right-6 z-50 flex items-center gap-2.5 pl-5 pr-5 py-3.5 rounded-full bg-accent-gradient text-white text-[14px] font-semibold shadow-accent"
+          className="btn-sheen group fixed bottom-6 right-6 z-50 flex items-center gap-2.5 pl-5 pr-5 py-3.5 rounded-full bg-accent-gradient text-white text-[14px] font-semibold shadow-accent"
           aria-label="Contact me"
         >
           <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 20 20">

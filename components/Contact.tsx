@@ -88,7 +88,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-3 mb-4">
             <a
               href={`mailto:${EMAIL}?subject=AI%20ad%20enquiry`}
-              className="group flex-1 flex items-center justify-center gap-2.5 px-6 py-4 text-[15px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
+              className="btn-sheen group flex-1 flex items-center justify-center gap-2.5 px-6 py-4 text-[15px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
             >
               <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 20 20">
                 <rect x="2.5" y="4.5" width="15" height="11" rx="2" stroke="currentColor" strokeWidth="1.5" />

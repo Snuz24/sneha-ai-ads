@@ -111,10 +111,10 @@ function AdCard({ ad, index }: { ad: Ad; index: number }) {
           controlsList="nodownload"
           className="w-full h-full object-cover"
         />
-        <div className="pointer-events-none absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/85 backdrop-blur-sm text-[10.5px] font-semibold text-accent border border-accent/20 uppercase tracking-wide shadow-soft">
+        <div className="pointer-events-none absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-[#060d20]/70 backdrop-blur-sm text-[10.5px] font-semibold text-accent border border-accent/30 uppercase tracking-wide shadow-soft">
           {ad.niche}
         </div>
-        <div className="pointer-events-none absolute top-3 right-3 z-10 px-2 py-0.5 rounded-md bg-white/85 backdrop-blur-sm text-[11px] font-semibold text-text-primary">
+        <div className="pointer-events-none absolute top-3 right-3 z-10 px-2 py-0.5 rounded-md bg-[#060d20]/70 backdrop-blur-sm text-[11px] font-semibold text-text-primary">
           {ad.duration}
         </div>
       </div>
@@ -175,7 +175,7 @@ export default function FeaturedWork() {
               className={clsx(
                 "px-4 py-1.5 rounded-full text-[12.5px] font-semibold transition-all duration-200",
                 active === f
-                  ? "bg-accent text-white shadow-accent-sm"
+                  ? "bg-accent text-canvas shadow-gold"
                   : "bg-card text-text-secondary hover:bg-accent-light hover:text-accent border border-border hover:border-accent-mid/40"
               )}
             >

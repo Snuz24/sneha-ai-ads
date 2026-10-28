@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Sparkles from "./Sparkles";
 
 const serviceChips = [
   "Brand films",
@@ -17,16 +18,23 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-20">
       {/* Background atmosphere */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-        <div className="absolute -top-[15%] left-[5%] w-[650px] h-[650px] rounded-full bg-accent/[0.07] blur-[130px] animate-float-a" />
-        <div className="absolute top-[25%] right-[0%] w-[500px] h-[500px] rounded-full bg-accent-2/[0.06] blur-[110px] animate-float-b" />
-        <div className="absolute bottom-[5%] left-[35%] w-[380px] h-[380px] rounded-full bg-accent-mid/[0.08] blur-[90px] animate-float-c" />
+        {/* Ocean-blue depth glow */}
+        <div className="absolute -top-[20%] left-[0%] w-[720px] h-[720px] rounded-full bg-accent-2/[0.14] blur-[140px] animate-float-a" />
+        {/* Champagne-gold glow */}
+        <div className="absolute top-[18%] right-[-5%] w-[520px] h-[520px] rounded-full bg-accent/[0.10] blur-[120px] animate-float-b" />
+        {/* Deep blue accent */}
+        <div className="absolute bottom-[2%] left-[32%] w-[420px] h-[420px] rounded-full bg-accent-mid/[0.22] blur-[100px] animate-float-c" />
+        {/* Top sheen like sunlit horizon */}
+        <div className="absolute inset-x-0 top-0 h-[40%] bg-[linear-gradient(180deg,rgba(90,155,237,0.10)_0%,transparent_100%)]" />
+        {/* Fine grid */}
         <div
-          className="absolute inset-0 opacity-[0.018]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: "radial-gradient(circle, #1c1c2e 1px, transparent 1px)",
-            backgroundSize: "36px 36px",
+            backgroundImage: "radial-gradient(circle, rgba(227,193,106,0.5) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
           }}
         />
+        <Sparkles />
       </div>
 
       <div className="relative max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
@@ -91,7 +99,7 @@ export default function Hero() {
           >
             <a
               href="#work"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
+              className="btn-sheen group inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold bg-accent-gradient rounded-xl text-white shadow-button hover:shadow-accent transition-shadow"
             >
               See My Work
               <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 16 16">
@@ -100,7 +108,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold rounded-xl border border-border-md text-text-primary hover:bg-text-primary/[0.03] hover:border-text-primary/20 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 text-[14.5px] font-semibold rounded-xl border border-border-md text-accent hover:bg-accent-light hover:border-accent/50 transition-all"
             >
               Email Me
             </a>
@@ -135,7 +143,7 @@ export default function Hero() {
         >
           <div
             className="relative w-[300px] aspect-[9/16] rounded-3xl overflow-hidden bg-surface"
-            style={{ boxShadow: "0 2px 8px rgba(28,28,46,0.06), 0 16px 48px rgba(124,111,224,0.14), 0 0 0 1px rgba(28,28,46,0.07)" }}
+            style={{ boxShadow: "0 0 0 1px rgba(227,193,106,0.3), 0 24px 70px rgba(0,0,0,0.6), 0 0 70px rgba(47,125,224,0.22)" }}
           >
             <video
               src="/media/reel.mp4"
@@ -146,8 +154,10 @@ export default function Hero() {
               preload="metadata"
               className="w-full h-full object-cover"
             />
+            {/* Gold frame ring */}
+            <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-accent/25 pointer-events-none" />
             {/* Reel label */}
-            <div className="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-white/80 backdrop-blur-sm text-[10.5px] font-semibold text-accent border border-accent/20 uppercase tracking-wide">
+            <div className="absolute top-4 left-4 px-2.5 py-1 rounded-full glass-warm text-[10.5px] font-semibold text-accent uppercase tracking-wide">
               Showreel
             </div>
             {/* Nameplate */}

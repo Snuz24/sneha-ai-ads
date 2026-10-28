@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  background-color: #faf9f6;
-  color: #1c1c2e;
+  background-color: #060d20;
+  color: #f4efdf;
   font-family: var(--font-inter), 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,53 +29,110 @@ body {
 }
 
 ::selection {
-  background: rgba(124, 111, 224, 0.18);
-  color: #1c1c2e;
+  background: rgba(227, 193, 106, 0.3);
+  color: #fff;
 }
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #faf9f6; }
-::-webkit-scrollbar-thumb { background: #d4cef5; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #b8b0ee; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #060d20; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#e3c16a, #c79a3c); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #e3c16a; }
 
 @layer utilities {
+  /* Platinum heading gradient */
   .text-gradient-warm {
-    background: linear-gradient(135deg, #1c1c2e 0%, #3a3a5e 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #cdd9f2 60%, #aab7d6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
+  /* Champagne-gold shimmering gradient (animated) */
   .text-gradient-accent {
-    background: linear-gradient(135deg, #7c6fe0 0%, #a89fe8 100%);
+    background: linear-gradient(
+      100deg,
+      #c79a3c 0%,
+      #e3c16a 20%,
+      #fff3cf 38%,
+      #e3c16a 55%,
+      #c79a3c 75%,
+      #e3c16a 100%
+    );
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: shimmer 4.5s linear infinite;
   }
 
+  @keyframes shimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  /* Dark sapphire glass */
   .glass-warm {
-    background: rgba(250, 249, 246, 0.88);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid rgba(28, 28, 46, 0.08);
+    background: rgba(10, 20, 44, 0.72);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(227, 193, 106, 0.18);
   }
 
   .card-border {
-    border: 1px solid rgba(28, 28, 46, 0.08);
+    border: 1px solid rgba(227, 193, 106, 0.16);
   }
 
   .divider {
-    border-top: 1px solid rgba(28, 28, 46, 0.07);
+    border-top: 1px solid rgba(227, 193, 106, 0.14);
   }
 
   .section-label {
     font-size: 11.5px;
     font-weight: 600;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #7c6fe0;
+    color: #e3c16a;
+  }
+
+  /* Gold sheen sweep for primary buttons */
+  .btn-sheen {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-sheen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+    transform: translateX(-120%) skewX(-18deg);
+    animation: sheen 6s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  @keyframes sheen {
+    0%        { transform: translateX(-120%) skewX(-18deg); }
+    18%, 100% { transform: translateX(320%) skewX(-18deg); }
+  }
+
+  /* Faint luxury grain */
+  .grain-overlay::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
 
-/* Smooth hover transitions for all interactive elements */
 a, button { transition-property: color, background-color, border-color, box-shadow, opacity, transform; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
