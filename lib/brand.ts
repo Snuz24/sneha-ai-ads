@@ -5,4 +5,4 @@ export const STUDIO_NAME = "AI Ad Studio";
 
 // The person leading the studio.
 export const FOUNDER_NAME = "Sneha J";
-export const FOUNDER_ROLE = "Creative Director";
+export const FOUNDER_ROLE = "Founder & Creative Director";

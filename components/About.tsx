@@ -109,7 +109,7 @@ export default function About() {
 
             <div className="space-y-5 text-[15.5px] leading-[1.8] text-text-secondary">
               <p>
-                Hi, I'm Sneha — I lead a small, studio-led team that makes AI-powered ads for brands. I've been editing videos and making content for <strong className="text-text-primary font-semibold">six years</strong>, and these days we use AI to make the kind of ads that used to need a full shoot — models, sets, festive lighting and all — and bring them within reach of brands that could never book that kind of production.
+                Hi, I'm Sneha — I founded and run a small studio that makes AI-powered ads for brands. I've been editing videos and making content for <strong className="text-text-primary font-semibold">six years</strong>, and these days we use AI to make the kind of ads that used to need a full shoot — models, sets, festive lighting and all — and bring them within reach of brands that could never book that kind of production.
               </p>
               <p>
                 But the tools are just the camera. The part that actually matters — the hook, the emotion, the little human moment that makes someone stop scrolling — that's still the craft I've spent years on. AI lets me move faster and go bigger; it doesn't write the story for me.
