@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import clsx from "clsx";
+import TiltCard from "./TiltCard";
 
 const filters = ["All", "Jewellery", "Fashion", "Food", "Beauty"];
 
@@ -97,12 +98,13 @@ function AdCard({ ad, index }: { ad: Ad; index: number }) {
       initial={{ opacity: 0, y: 28 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex flex-col rounded-2xl overflow-hidden bg-card card-border"
-      style={{ boxShadow: "0 1px 3px rgba(28,28,46,0.05), 0 6px 24px rgba(28,28,46,0.07)" }}
-      whileHover={{ y: -3 }}
+      style={{ perspective: 1100 }}
+    >
+    <TiltCard
+      className="group relative flex flex-col rounded-2xl overflow-hidden bg-card card-border shadow-card hover:shadow-card-hover transition-shadow duration-300 will-change-transform"
     >
       {/* Video */}
-      <div className="relative aspect-[9/16] overflow-hidden bg-surface">
+      <div className="relative aspect-[9/16] overflow-hidden bg-surface" style={{ transform: "translateZ(30px)" }}>
         <video
           src={ad.video}
           controls
@@ -120,7 +122,7 @@ function AdCard({ ad, index }: { ad: Ad; index: number }) {
       </div>
 
       {/* Body */}
-      <div className="flex flex-col flex-1 p-5">
+      <div className="flex flex-col flex-1 p-5" style={{ transform: "translateZ(18px)" }}>
         <div className="flex items-center gap-1.5 mb-2">
           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
           <span className="text-[11.5px] font-semibold text-accent uppercase tracking-wide">{ad.kind}</span>
@@ -129,6 +131,7 @@ function AdCard({ ad, index }: { ad: Ad; index: number }) {
         <p className="text-[12px] font-medium text-text-muted mb-2.5">{ad.brandLine}</p>
         <p className="text-[13px] text-text-secondary leading-relaxed">{ad.description}</p>
       </div>
+    </TiltCard>
     </motion.div>
   );
 }

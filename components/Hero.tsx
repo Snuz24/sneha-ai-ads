@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import Sparkles from "./Sparkles";
 import { STUDIO_NAME, FOUNDER_NAME, FOUNDER_ROLE } from "@/lib/brand";
 
@@ -12,13 +12,59 @@ const serviceChips = [
   "Any industry",
 ];
 
-const industries = ["Beauty", "Fashion", "Food", "Jewellery", "Tech", "Lifestyle"];
+const industries = ["Beauty", "Fashion", "Food", "Jewellery", "Tech", "Lifestyle", "Services"];
+
+// Masked word-by-word reveal
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.055, delayChildren: 0.18 } },
+};
+const word = {
+  hidden: { y: "115%" },
+  show: { y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+};
+
+const line1 = ["AI", "ads", "that", "make"];
+const line2 = ["people", "stop", "scrolling", "and"];
+const line3 = ["start", "buying."];
+
+function MaskWord({ children, gold = false }: { children: string; gold?: boolean }) {
+  return (
+    <span className="inline-block overflow-hidden align-bottom pb-[0.12em] -mb-[0.12em]">
+      <motion.span variants={word} className={`inline-block ${gold ? "text-gradient-accent" : "text-gradient-warm"}`}>
+        {children}
+      </motion.span>
+    </span>
+  );
+}
 
 export default function Hero() {
+  // Cursor-tracking spotlight
+  const mx = useMotionValue(50);
+  const my = useMotionValue(28);
+  const spotlight = useMotionTemplate`radial-gradient(540px circle at ${mx}% ${my}%, rgba(227,193,106,0.12), rgba(90,155,237,0.06) 35%, transparent 62%)`;
+
+  const handleMove = (e: React.MouseEvent<HTMLElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    mx.set(((e.clientX - r.left) / r.width) * 100);
+    my.set(((e.clientY - r.top) / r.height) * 100);
+  };
+
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-20">
+    <section
+      onMouseMove={handleMove}
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-20"
+    >
       {/* Background atmosphere */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        {/* Animated aurora mesh */}
+        <div
+          className="absolute left-1/2 top-[-30%] -translate-x-1/2 w-[1100px] h-[1100px] rounded-full blur-[120px] opacity-60 animate-aurora"
+          style={{
+            background:
+              "conic-gradient(from 0deg, rgba(90,155,237,0.22), rgba(227,193,106,0.14), rgba(44,74,134,0.26), rgba(90,155,237,0.22))",
+          }}
+        />
         {/* Ocean-blue depth glow */}
         <div className="absolute -top-[20%] left-[0%] w-[720px] h-[720px] rounded-full bg-accent-2/[0.14] blur-[140px] animate-float-a" />
         {/* Champagne-gold glow */}
@@ -35,6 +81,8 @@ export default function Hero() {
             backgroundSize: "40px 40px",
           }}
         />
+        {/* Cursor-tracking spotlight */}
+        <motion.div className="absolute inset-0" style={{ background: spotlight }} />
         <Sparkles />
       </div>
 
@@ -52,15 +100,28 @@ export default function Hero() {
 AI Ad Studio · Available for Projects
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline — masked word-by-word reveal */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] font-bold tracking-tightest leading-[1.08] text-gradient-warm mb-5"
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="text-[2.6rem] sm:text-[3.4rem] lg:text-[4rem] font-bold tracking-tightest leading-[1.1] text-text-primary mb-5"
           >
-            AI ads that make people stop scrolling and{" "}
-            <span className="text-gradient-accent">start buying.</span>
+            <span className="block">
+              {line1.map((w) => (
+                <span key={w} className="inline-block mr-[0.26em]"><MaskWord>{w}</MaskWord></span>
+              ))}
+            </span>
+            <span className="block">
+              {line2.map((w) => (
+                <span key={w} className="inline-block mr-[0.26em]"><MaskWord>{w}</MaskWord></span>
+              ))}
+            </span>
+            <span className="block">
+              {line3.map((w) => (
+                <span key={w} className="inline-block mr-[0.26em]"><MaskWord gold>{w}</MaskWord></span>
+              ))}
+            </span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -125,12 +186,16 @@ We're a studio-led team making AI ads for brands of every kind — from beauty, 
             <p className="text-[11.5px] font-medium text-text-muted uppercase tracking-widest mb-4">
               Ads for brands across
             </p>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {industries.map((item) => (
-                <span key={item} className="text-[13.5px] font-semibold text-text-muted/70">
-                  {item}
-                </span>
-              ))}
+            {/* Infinite marquee */}
+            <div className="relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
+              <div className="flex w-max items-center gap-x-8 animate-marquee">
+                {[...industries, ...industries].map((item, i) => (
+                  <span key={i} className="flex items-center gap-x-8 text-[13.5px] font-semibold text-text-secondary/80 whitespace-nowrap">
+                    {item}
+                    <span className="w-1 h-1 rounded-full bg-accent/60" />
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>

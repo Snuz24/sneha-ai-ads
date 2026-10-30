@@ -46,6 +46,8 @@ const config: Config = {
         "shimmer":   "shimmer 4.5s linear infinite",
         "twinkle":   "twinkle 3.2s ease-in-out infinite",
         "sheen":     "sheen 6s ease-in-out infinite",
+        "marquee":   "marquee 26s linear infinite",
+        "aurora":    "aurora 24s linear infinite",
       },
       keyframes: {
         floatA: {
@@ -73,6 +75,15 @@ const config: Config = {
         sheen: {
           "0%":       { transform: "translateX(-120%) skewX(-18deg)" },
           "18%,100%": { transform: "translateX(320%) skewX(-18deg)" },
+        },
+        marquee: {
+          "0%":   { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        aurora: {
+          "0%":   { transform: "rotate(0deg) scale(1.1)" },
+          "50%":  { transform: "rotate(180deg) scale(1.3)" },
+          "100%": { transform: "rotate(360deg) scale(1.1)" },
         },
       },
       boxShadow: {

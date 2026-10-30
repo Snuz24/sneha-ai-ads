@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ScrollProgress from "@/components/ScrollProgress";
 import Hero from "@/components/Hero";
 import FeaturedWork from "@/components/FeaturedWork";
 import WhatWeCreate from "@/components/WhatWeCreate";
@@ -10,6 +11,7 @@ import FloatingContact from "@/components/FloatingContact";
 export default function Home() {
   return (
     <main className="relative overflow-x-hidden">
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <FeaturedWork />

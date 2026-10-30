@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import TiltCard from "./TiltCard";
 
 const items = [
   {
@@ -106,14 +107,13 @@ export default function WhatWeCreate() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.08 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="group flex flex-col p-7 rounded-2xl bg-card card-border hover:shadow-card-hover transition-shadow duration-300"
-              style={{ boxShadow: "0 1px 3px rgba(28,28,46,0.05), 0 4px 20px rgba(28,28,46,0.06)" }}
-              whileHover={{ y: -3 }}
+              style={{ perspective: 1100 }}
             >
-              <div className="w-11 h-11 rounded-xl bg-accent-light text-accent flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300">
+            <TiltCard max={7} className="group relative h-full flex flex-col p-7 rounded-2xl bg-card card-border shadow-card hover:shadow-card-hover transition-shadow duration-300 will-change-transform">
+              <div className="w-11 h-11 rounded-xl bg-accent-light text-accent flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300" style={{ transform: "translateZ(26px)" }}>
                 {item.icon}
               </div>
-              <h3 className="text-[16px] font-semibold text-text-primary tracking-snug mb-2">{item.title}</h3>
+              <h3 className="text-[16px] font-semibold text-text-primary tracking-snug mb-2" style={{ transform: "translateZ(16px)" }}>{item.title}</h3>
               <p className="text-[13.5px] text-text-secondary leading-relaxed mb-5 flex-1">{item.description}</p>
 
               <div className="space-y-2.5 pt-4 border-t border-border">
@@ -126,6 +126,7 @@ export default function WhatWeCreate() {
                   <p className="text-[12.5px] text-text-secondary leading-snug">{item.worksOn}</p>
                 </div>
               </div>
+            </TiltCard>
             </motion.div>
           ))}
         </div>
